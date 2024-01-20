@@ -1,0 +1,41 @@
+.lbl1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.abtn:hover {
+    background-color: #DAA520;
+}
+
+.logo {
+    height: 90px;
+    background-image: url("../resources/logo.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.background {
+    background-image: url("../resources/food-5049101.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.order {
+    /* background-color: white; */
+    background-image: linear-gradient(210deg, rgb(160, 160, 159), rgb(199, 192, 192));
+    cursor: pointer;
+}
+
+.active_order {
+    /* background-color: rgb(164, 182, 3); */
+    background-image: linear-gradient(130deg, rgb(179, 137, 0), rgb(247, 115, 8));
+    cursor: pointer;
+    border-radius: 2%;
+    color: white;
+}
+
+.over:hover {
+    background-color: rgb(146, 17, 17);
+}

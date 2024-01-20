@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url("fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Honey Script";
+    src: url("fonts/HoneyScript-Light.ttf");
+}
+
+* {
+    font-family: "Quicksand";
+}
+
+.logo {
+    /* color: #f5e2b1; */
+    height: 90px;
+    background-image: url("../resources/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.title1 {
+    font-family: "Honey Script";
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.title2 {
+    font-weight: bold;
+}
+
+.background {
+    background-image: url("../resources/food-5049101.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 250px;
+}
+
+.mainBackground {
+    background-image: url("resources/background-body.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

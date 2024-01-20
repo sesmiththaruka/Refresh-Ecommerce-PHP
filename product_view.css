@@ -1,0 +1,382 @@
+.hrbreak1 {
+    border-style: solid;
+    background-color: silver;
+    border-width: 1px;
+}
+
+.logoimg {
+    background-image: url("resources/logo.jpeg");
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* card */
+
+.recipe,
+.pizza-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pizza-box {
+    flex: 3 1 30ch;
+    height: calc(282px + 5vw);
+    overflow: hidden;
+}
+
+.pizza-box img {
+    max-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+}
+
+.recipe {
+    border: 2px solid #f2f2f2;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.recipe-content {
+    padding: 16px 32px;
+    flex: 4 1 40ch;
+}
+
+.recipe-tags {
+    margin: 0 -8px;
+}
+
+.recipe-tag {
+    display: inline-block;
+    margin: 8px;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--primary);
+}
+
+.recipe-title {
+    margin: 0;
+    font-size: clamp(1.4em, 2.1vw, 2.1em);
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+}
+
+.recipe-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-metadata {
+    margin: 0;
+}
+
+.recipe-rating {
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+}
+
+.recipe-rating span {
+    color: var(--grey);
+}
+
+.recipe-votes {
+    font-size: 0.825em;
+    font-style: italic;
+    color: var(--lightgrey);
+}
+
+.recipe-save {
+    display: flex;
+    align-items: center;
+    padding: 6px 14px 6px 12px;
+    border-radius: 4px;
+    border: 2px solid currentColor;
+    color: var(--primary);
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.recipe-save svg {
+    margin-right: 6px;
+}
+
+
+/* Body Layout */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --primary: #e05d26;
+    --grey: #454545;
+    --lightgrey: #666;
+    color: var(--grey);
+    line-height: 1.55;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.big {
+    width: clamp(320px, 65%, 65%);
+    padding: 24px;
+}
+
+.small {
+    width: clamp(320px, 35%, 480px);
+    padding: 24px;
+}
+
+
+/* ///////////////////////////////price slider///////////////////////////////// */
+
+body {
+    font-family: 'Karla', 'Arial', sans-serif;
+    font-weight: 500;
+    background: #fff;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.filter-price {
+    width: 220px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.price-title {
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 400;
+    background: #d58e32;
+    padding: 10px;
+}
+
+.price-container {
+    display: flex;
+    border: 1px solid #ccc;
+    /* padding: 5px;
+    margin-left: 57px; */
+    /* width: 100px; */
+}
+
+.price-field {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 0px;
+}
+
+.price-field input[type=range] {
+    position: absolute;
+}
+
+
+/* Reset style for input range */
+
+.price-field input[type=range] {
+    width: 100%;
+    height: 7px;
+    border: 1px solid #000;
+    outline: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.price-field input[type=range]:active,
+.price-field input[type=range]:focus {
+    outline: 0;
+}
+
+.price-field input[type=range]::-ms-track {
+    /* width: 188px; */
+    height: 2px;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    pointer-events: none;
+    background: transparent;
+    border-color: transparent;
+    color: red;
+    border-radius: 5px;
+}
+
+
+/* Style toddler input range */
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    /* WebKit/Blink */
+    position: relative;
+    -webkit-appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-top: -4px;
+    background-color: #fff;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+.price-field input[type=range]::-moz-range-thumb {
+    /* Firefox */
+    position: relative;
+    appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-top: -5px;
+    background-color: #fff;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+.price-field input[type=range]::-ms-thumb {
+    /* IE */
+    position: relative;
+    appearance: none;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-top: -5px;
+    background-color: #242424;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+
+/* Style track input range */
+
+.price-field input[type=range]::-webkit-slider-runnable-track {
+    /* WebKit/Blink */
+    width: 188px;
+    height: 2px;
+    cursor: pointer;
+    background: #555;
+    border-radius: 5px;
+}
+
+.price-field input[type=range]::-moz-range-track {
+    /* Firefox */
+    width: 188px;
+    height: 2px;
+    cursor: pointer;
+    background: #242424;
+    border-radius: 5px;
+}
+
+.price-field input[type=range]::-ms-track {
+    /* IE */
+    width: 188px;
+    height: 2px;
+    cursor: pointer;
+    background: #242424;
+    border-radius: 5px;
+}
+
+
+/* Style for input value block */
+
+.price-wrap {
+    display: flex;
+    color: #242424;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.price-wrap-1,
+.price-wrap-2 {
+    display: flex;
+    margin-left: 0px;
+}
+
+.price-wrap_line {
+    margin: 6px 0px 5px 5px;
+}
+
+.price-wrap #one,
+.price-wrap #two {
+    width: 30px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-right: 2px;
+    background: 0;
+    border: 0;
+    outline: 0;
+    color: #242424;
+    font-family: 'Karla', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+.price-wrap label {
+    text-align: right;
+    margin-top: 6px;
+    padding-left: 5px;
+}
+
+
+/* Style for active state input */
+
+.price-field input[type=range]:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0.5px #242424;
+    transition-duration: 0.3s;
+}
+
+.price-field input[type=range]:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0.5px #242424;
+    transition-duration: 0.3s;
+}
